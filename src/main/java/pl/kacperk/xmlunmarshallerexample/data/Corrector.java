@@ -10,14 +10,10 @@ public class Corrector {
     public List<Child> correct(List<Child> children) {
         for (Child c : children) {
             c.setName(c.getName().toUpperCase());
-            if (c.getEthnicity().equals("BLACK NON HISP")) {
-                c.setEthnicity("BLACK NON HISPANIC");
-            }
-            if (c.getEthnicity().equals("ASIAN AND PACI")) {
-                c.setEthnicity("ASIAN AND PACIFIC ISLANDER");
-            }
-            if (c.getEthnicity().equals("WHITE NON HISP")) {
-                c.setEthnicity("WHITE NON HISPANIC");
+            switch (c.getEthnicity()) {
+                case "BLACK NON HISP" -> c.setEthnicity("BLACK NON HISPANIC");
+                case "ASIAN AND PACI" -> c.setEthnicity("ASIAN AND PACIFIC ISLANDER");
+                case "WHITE NON HISP" -> c.setEthnicity("WHITE NON HISPANIC");
             }
         }
         return children;

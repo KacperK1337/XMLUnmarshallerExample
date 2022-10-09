@@ -9,8 +9,7 @@ public class TopValuesPrinter {
     public void printTopValues(List<Map.Entry<String, Long>> topObjects, int limit, String name) {
         setup(limit, name);
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Top ");
+        StringBuilder sb = new StringBuilder("Top ");
         sb.append(limit);
         sb.append(" ").append(name);
         sb.append(": ");

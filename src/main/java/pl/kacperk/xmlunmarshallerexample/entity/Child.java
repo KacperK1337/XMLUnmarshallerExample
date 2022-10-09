@@ -3,7 +3,6 @@ package pl.kacperk.xmlunmarshallerexample.entity;
 import lombok.*;
 
 import javax.xml.bind.annotation.*;
-import java.util.Objects;
 
 @Getter
 @Setter
